@@ -1,22 +1,22 @@
 import cv2
 import numpy as np
 
-img =cv2.imread('..\Photos/park.jpg')
+img = cv2.imread(r"C:\Users\Alexander\OneDrive - The University of Sydney (Students)\usyd robotics club\python_opencv_workshop_usrc-main\python_opencv_workshop_usrc-main\Photos\park.jpg")
 
 cv2.imshow('Park',img)
 
-#translation
-def translate(img,x,y):
-    # -x = Left
-    # -y = Up
-    transMat =np.float32([[1,0,x],[0,1,y]])
-    dimensions = (img.shape[1],img.shape[0])
+# #translation
+# def translate(img,x,y):
+#     # -x = Left
+#     # -y = Up
+#     transMat =np.float32([[1,0,x],[0,1,y]])
+#     dimensions = (img.shape[1],img.shape[0])
 
-    return cv2.warpAffine(img,transMat,dimensions)
+#     return cv2.warpAffine(img,transMat,dimensions)
 
 
-translated = translate(img,100,100)
-cv2.imshow('translated',translated)
+# translated = translate(img,100,100)
+# cv2.imshow('translated',translated)
 
 #Rotation
 def rotate(img, angle, rotPoint=None):
