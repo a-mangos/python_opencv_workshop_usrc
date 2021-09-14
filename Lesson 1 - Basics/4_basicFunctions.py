@@ -1,6 +1,6 @@
 #basic functions
 import cv2
-img = cv2.imread(r"C:\Users\Alexander\OneDrive - The University of Sydney (Students)\usyd robotics club\python_opencv_workshop_usrc-main\python_opencv_workshop_usrc-main\Photos\park.jpg")
+img = cv2.imread('..\Photos\cat.jpg')
 cv2.imshow('Cat', img)
 
 #convert to greyscale
@@ -16,18 +16,18 @@ cv2.imshow('Blur',blur)
 canny=cv2.Canny(img,125,200)
 cv2.imshow('Canny',canny)
 
-# #dilate
-# #used to accentuate edge cases
-# dilated=cv2.dilate(canny,(3,3),iterations=1)
-# cv2.imshow('Dilated',dilated)
+#dilate
+#used to accentuate edge cases
+dilated=cv2.dilate(canny,(3,3),iterations=1)
+cv2.imshow('Dilated',dilated)
 
-# #erode
-# #used to diminish edge cases
-# eroded=cv2.erode(dilated,(3,3),iterations=1)
-# cv2.imshow('Eroded',eroded)
+#erode
+#used to diminish edge cases
+eroded=cv2.erode(dilated,(3,3),iterations=1)
+cv2.imshow('Eroded',eroded)
 
-# #resize
-# resized=cv2.resize(img,(500,500))
-# cv2.imshow('Resize',resized)
+#resize
+resized=cv2.resize(img,(500,500))
+cv2.imshow('Resize',resized)
 
 cv2.waitKey(0)
